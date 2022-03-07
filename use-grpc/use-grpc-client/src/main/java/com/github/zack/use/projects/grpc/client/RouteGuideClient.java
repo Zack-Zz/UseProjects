@@ -1,7 +1,6 @@
 package com.github.zack.use.projects.grpc.client;
 
 import com.google.common.annotations.VisibleForTesting;
-import com.google.common.collect.Lists;
 import io.grpc.*;
 import io.grpc.stub.StreamObserver;
 

@@ -11,6 +11,7 @@
     <modules>
         <module>use-protobuf</module>
         <module>use-grpc</module>
+        <module>use-spell-check</module>
     </modules>
 
     <properties>
