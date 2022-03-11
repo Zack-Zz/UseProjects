@@ -1,4 +1,4 @@
-package com.github.zack.use.spell.check.norvig;
+package com.github.zack.use.spell.check;
 
 /**
  * @author zhouze
