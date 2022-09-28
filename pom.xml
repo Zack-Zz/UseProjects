@@ -12,6 +12,7 @@
         <module>use-protobuf</module>
         <module>use-grpc</module>
         <module>use-spell-check</module>
+        <module>use-reactor</module>
     </modules>
 
     <properties>
