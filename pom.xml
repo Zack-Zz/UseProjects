@@ -13,6 +13,7 @@
         <module>use-grpc</module>
         <module>use-spell-check</module>
         <module>use-reactor</module>
+        <module>use-custom-circuit-breaker</module>
     </modules>
 
     <properties>
