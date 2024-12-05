@@ -1,12 +1,9 @@
 package com.github.zack.use.java.base.cl;
 
-import com.sun.deploy.util.StringUtils;
 
 import java.io.*;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Objects;
 
 /**
  * @author zack
