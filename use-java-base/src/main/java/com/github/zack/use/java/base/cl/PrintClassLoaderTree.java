@@ -4,21 +4,24 @@ package com.github.zack.use.java.base.cl;
  * @author zack
  * @since 2024/12/4
  */
-public class PrintClassLoaderTree {
+public class PrintClassLoaderTree implements PrintClassLoader {
 
     public static void main(String[] args) {
+        PrintClassLoaderTree pl = new PrintClassLoaderTree();
+
         ClassLoader classLoader = PrintClassLoaderTree.class.getClassLoader();
-        printCl(classLoader);
+        pl.printCl(classLoader);
 
         ClassLoader contextClassLoader = Thread.currentThread().getContextClassLoader();
-        printCl(contextClassLoader);
+        pl.printCl(contextClassLoader);
 
         ClassLoader systemClassLoader = ClassLoader.getSystemClassLoader();
-        printCl(systemClassLoader);
+        pl.printCl(systemClassLoader);
 
     }
 
-    public static void printCl(ClassLoader classLoader) {
+    @Override
+    public void printCl(ClassLoader classLoader) {
 
         StringBuilder split = new StringBuilder("|--");
         boolean needContinue = true;
