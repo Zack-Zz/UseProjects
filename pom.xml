@@ -16,6 +16,7 @@
         <module>use-custom-circuit-breaker</module>
         <module>use-bytebuddy</module>
         <module>use-java-base</module>
+        <module>use-cglib</module>
     </modules>
 
     <properties>
