@@ -1,0 +1,2 @@
+com.github.zack.use.ast.processor.ASTProcessor
+com.github.zack.use.ast.processor.AutoGetterProcessor

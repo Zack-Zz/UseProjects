@@ -11,7 +11,5 @@ public class Resource {
      * clean up
      */
     public void cleanup() {
-
-
     }
 }
