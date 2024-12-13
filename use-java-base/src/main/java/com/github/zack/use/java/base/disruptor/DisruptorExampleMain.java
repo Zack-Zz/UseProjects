@@ -1,6 +1,7 @@
 package com.github.zack.use.java.base.disruptor;
 
 import com.lmax.disruptor.RingBuffer;
+import com.lmax.disruptor.SequenceBarrier;
 import com.lmax.disruptor.dsl.Disruptor;
 
 import java.util.concurrent.ExecutorService;
@@ -23,7 +24,7 @@ public class DisruptorExampleMain {
                 executor
         );
 
-        // 设置事件处理器,并行消费，每个处理器单独一个线程
+        // 设置事件处理器,并行消费，每个处理器单独一个线程,也可以.then() 链式消费
         disruptor.handleEventsWith(new EventHandlerImpl(), new EventHandlerTwoImpl());
 
         // 启动 Disruptor
@@ -31,7 +32,8 @@ public class DisruptorExampleMain {
 
         // 发布事件
         RingBuffer<Event> ringBuffer = disruptor.getRingBuffer();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 100; i++) {
+
             long sequence = ringBuffer.next(); // 获取序号
             try {
                 Event event = ringBuffer.get(sequence);
