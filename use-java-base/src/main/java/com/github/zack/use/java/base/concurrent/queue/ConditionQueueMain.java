@@ -26,7 +26,7 @@ public class ConditionQueueMain {
                 System.out.println("Condition met, proceeding...");
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
-            } finally {                                                                                                                                                          h
+            } finally {
                 lock.unlock();
             }
         });
