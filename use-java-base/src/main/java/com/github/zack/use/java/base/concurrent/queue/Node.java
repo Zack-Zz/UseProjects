@@ -6,6 +6,10 @@ package com.github.zack.use.java.base.concurrent.queue;
  */
 public class Node<T> {
 
+    public static void main(String[] args) {
+        System.out.println(5/2);
+    }
+
     private volatile int status;
 
     private T t;

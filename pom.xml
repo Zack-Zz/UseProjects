@@ -18,6 +18,7 @@
         <module>use-java-base</module>
         <module>use-cglib</module>
         <module>use-ast</module>
+        <module>use-netty</module>
     </modules>
 
     <properties>
