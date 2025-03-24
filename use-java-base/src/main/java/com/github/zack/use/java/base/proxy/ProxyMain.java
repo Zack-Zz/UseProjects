@@ -16,8 +16,8 @@ public class ProxyMain {
 
         CustomInvocationHandler invocationHandler = new CustomInvocationHandler(new PrintClassLoaderTree());
 
-        PrintClassLoader printClassLoader = (PrintClassLoader) Proxy.newProxyInstance(classLoader, new Class[]{PrintClassLoader.class}, invocationHandler);
+        PrintClassLoader printClassLoaderProxy = (PrintClassLoader) Proxy.newProxyInstance(classLoader, new Class[]{PrintClassLoader.class}, invocationHandler);
 
-        printClassLoader.printCl(classLoader);
+        printClassLoaderProxy.printCl(classLoader);
     }
 }
