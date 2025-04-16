@@ -9,9 +9,18 @@ import java.util.concurrent.locks.ReentrantLock;
 public class DemoTester {
 
     public static void main(String[] args) {
-        String phone = "+66 12312312";
-        String substring = phone.substring(3);
-        System.out.println(substring);
+        Integer a = new Integer(126);
+        Integer b = new Integer(126);
+        Integer c = Integer.valueOf(126);
+        Integer d = Integer.valueOf(126);
+
+        System.out.println(a == b); // false
+        System.out.println(b == c); // false
+        System.out.println(c == d); // true
+
+//        String phone = "+66 12312312";
+//        String substring = phone.substring(3);
+//        System.out.println(substring);
 
 //        ReentrantLock lock = new ReentrantLock();
 //

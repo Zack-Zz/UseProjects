@@ -32,7 +32,7 @@ public class CyclicBarrierMain {
                     System.out.println("[" + diff(now) + "]" + "All threads reached the barrier.[End]  Proceeding to next phase...");
                 });
 
-        for (int i = 0; i < threadCount * 3; i++) {
+        for (int i = 0; i < threadCount; i++) {
             if (i % 3 == 0) {
                 Thread.sleep(3000);
             }
@@ -42,6 +42,7 @@ public class CyclicBarrierMain {
                     Thread.sleep(1000); // 模拟任务
                     System.out.println("[" + diff(now) + "]" + Thread.currentThread().getName() + " reached the barrier.");
                     barrier.await(); // 等待其他线程
+                    System.out.println("[" + diff(now) + "]" + Thread.currentThread().getName() + " after await.");
                 } catch (InterruptedException | BrokenBarrierException e) {
                     e.printStackTrace();
                 }
