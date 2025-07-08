@@ -19,6 +19,10 @@
         <module>use-cglib</module>
         <module>use-ast</module>
         <module>use-netty</module>
+        <module>use-dubbo</module>
+        <module>use-dubbo/use-dubbo-client</module>
+        <module>use-dubbo/use-dubbo-server</module>
+        <module>use-dubbo/use-dubbo-server-api</module>
     </modules>
 
     <properties>
